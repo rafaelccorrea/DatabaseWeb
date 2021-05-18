@@ -1,0 +1,38 @@
+<%- include ('../partials/navbar.ejs') %>
+<body>
+
+    <div class="card-header">
+        <h3>Ordem de serviço </h3>
+    </div>
+        <br>
+    <div class="card-body">
+        <% data.forEach((ordem)=>{%>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nome cliente: </th>
+                        <th>Cod Assinante: </th>
+                        <th>Cod Contrato: </th>
+                        <th>Cidade: </th>
+                        <th>Numero OS: </th>
+                        <th>Cod equipe: </th>
+                        <th>Data agendamento: </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%=ordem.nomecliente %></td>
+                        <td><%=ordem.codigoassinante %></td>
+                        <td><%=ordem.codigocontrato %></td>
+                        <td><%=ordem.cidade %></td>
+                        <td><%=ordem.numos %></td>
+                        <td><%=ordem.equipe %></td>
+                        <td><%=ordem.d_dataagendamento %></td>
+                    </tr>
+                </tbody>
+            </table>
+        <%})%>
+         </div>
+        </body>
+
+<%- include ('../partials/footer.ejs') %>

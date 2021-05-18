@@ -1,0 +1,42 @@
+<%- include('../partials/navbar.ejs')%>
+<body>
+
+    <div class="card-header">
+        <h3>Programação </h3>
+    </div>
+        <br>
+    <div class="card-body">
+        <% pro.forEach((programa)=>{%>
+    
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Codigo Programação</th>
+                        <th>Nome: </th>
+                        <th>Abreviação: </th>
+                        <th>Liberação: </th>
+                        <th>Tipo ponto: </th>
+                        <th>Historico Pagamento: </th>
+                        <th>Vinculada: </th>
+                        <th>Codigo tipo tecnologia: </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                       <td><%= programa.codigodaprogramacao %></td>
+                       <td><%= programa.nomedaprogramacao %></td>
+                       <td><%= programa.nomeabreviado %></td>
+                       <td><%= programa.liberadaparavenda %></td>
+                       <td><%= programa.tipoponto %></td>
+                       <td><%= programa.paghistorico %></td>
+                       <td><%= programa.programacaovinculada %></td> 
+                       <td><%= programa.codtipotecnologia %></td>
+                    </tr>
+                </tbody>
+            </table>
+        <%})%>
+         </div>
+        </body>
+
+<%- include('../partials/footer.ejs')%>

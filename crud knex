@@ -1,0 +1,70 @@
+//orderBy = .whereRaw("nomedacidade = 'MARILAC' or id = 2 ")
+//Insert
+/*
+let dados = {
+    nomedacidade:"Marilia"
+};
+
+db.insert(dados).into("cidade").then(()=>{
+    console.log("Inserindo: " + dados)
+}).catch((err)=>{
+    console.log("Delete: " + err)
+});
+
+*/
+
+//Delete
+/*
+    db.where({
+    id: 3
+}).delete().table("games").then((dados)=>{
+    console.log(dados)
+}).catch((err)=>{
+    console.log(err)
+})
+
+*/
+
+//Select
+/*
+db.select([
+    "id",
+    "nomedacidade",
+    "usuario",
+    "d_datacadastro",
+    "t_horacadastro",
+    "percentualmulta"
+    
+]).where({
+    id: 2
+}).table("public.cidade").then((dados)=>{
+    console.log(dados)
+}).catch((err)=>{
+    console.log(err)
+})
+
+*/
+
+
+//Update
+/*
+db.where({
+    id:3
+}).update({
+    preco:40
+}).table("games").then((data)=>{
+    console.log(data)
+}).catch((err)=>{
+    console.log(err)
+})
+*/
+
+//WHERE
+/*
+.whereRaw(
+    "nomedacidade = 'MARILAC' or id = 2 "
+)
+.where({
+    id:3
+})
+*/

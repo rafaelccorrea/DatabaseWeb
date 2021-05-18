@@ -1,0 +1,37 @@
+<%- include ('../partials/navbar.ejs') %>
+<body>
+
+    <div class="card-header">
+        <h3>Cidades </h3>
+    </div>
+        <br>
+    <div class="card-body">
+        <% dados.forEach((dados)=>{%>
+    
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Usuario</th>
+                        <th>Cidade</th>
+                        <th>Codigo Cidade</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><%= dados.id%></td>
+                        <td><%= dados.usuario%></td>
+                        <td><%= dados.nomedacidade%></td>
+                        <td><%= dados.codigodacidade %></td>
+                        <td><%= dados.d_datacadastro%></td>
+                        <td><%= dados.t_horacadastro%></td>
+                    </tr>
+                </tbody>
+            </table>
+        <%})%>
+         </div>
+        </body>
+
+<%- include ('../partials/footer.ejs') %>
